@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="ProgressButton">
+        <attr name="selection_color" format="color" />
+        <attr name="unselection_color" format="color" />
+        <attr name="choice" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="QuestionView">
+        <!--add custom properties here-->
+    </declare-styleable>
+
+</resources>

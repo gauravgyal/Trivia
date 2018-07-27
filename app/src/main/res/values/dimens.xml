@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="d48">48dp</dimen>
+    <dimen name="d20">20dp</dimen>
+    <dimen name="d36">36dp</dimen>
+    <dimen name="d18">18dp</dimen>
+
+    <!--text sizes-->
+    <dimen name="f14">14sp</dimen>
+    <dimen name="f18">18sp</dimen>
+    <dimen name="f22">22sp</dimen>
+    <dimen name="f28">28sp</dimen>
+    <dimen name="option_text_size">@dimen/f14</dimen>
+</resources>

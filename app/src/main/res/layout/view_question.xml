@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="question"
+            type="com.gauravgoyal.trivia.model.Question" />
+
+    </data>
+
+    <merge xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <View
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.gauravgoyal.trivia.widget.OptionView
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d36"
+            android:layout_marginEnd="@dimen/d20"
+            android:layout_marginStart="@dimen/d20"
+            android:layout_marginTop="@dimen/d20"
+            app:option="@{question.option1}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeholder"
+            app:selection_color="@color/white"
+            app:unselection_color="@color/trivia_text_color" />
+
+        <com.gauravgoyal.trivia.widget.OptionView
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d36"
+            android:layout_marginEnd="@dimen/d20"
+            android:layout_marginStart="@dimen/d20"
+            android:layout_marginTop="@dimen/d20"
+            app:option="@{question.option2}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option1"
+            app:selection_color="@color/white"
+            app:unselection_color="@color/trivia_text_color" />
+
+        <com.gauravgoyal.trivia.widget.OptionView
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d36"
+            android:layout_marginEnd="@dimen/d20"
+            android:layout_marginStart="@dimen/d20"
+            android:layout_marginTop="@dimen/d20"
+            app:option="@{question.option3}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option2"
+            app:selection_color="@color/white"
+            app:unselection_color="@color/trivia_text_color" />
+
+
+        <com.gauravgoyal.trivia.widget.HierarchyAnimationGroup
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="option1, option2, option3" />
+
+        <android.support.constraint.Placeholder
+            android:id="@+id/placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/root" />
+
+
+        <TextView
+            android:id="@+id/ques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{question.stmt}"
+            android:gravity="center"
+            android:textSize="@dimen/f28"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/root"
+            app:layout_constraintEnd_toEndOf="@+id/root"
+            app:layout_constraintStart_toStartOf="@+id/root"
+            app:layout_constraintTop_toTopOf="@+id/root" />
+
+    </merge>
+</layout>
