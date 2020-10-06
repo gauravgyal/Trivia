@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity(), QuestionView.QuestionViewListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initUI()
-
         observeQuestion()
         activityVM.getData()
     }
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity(), QuestionView.QuestionViewListener {
     }
 
     private fun questionStmtAnim() {
-        TransitionManager.beginDelayedTransition(constraintLayout);
+        TransitionManager.beginDelayedTransition(constraintLayout)
         placeholder.apply {
             setContentId(ques.id)
             postOnAnimation {
