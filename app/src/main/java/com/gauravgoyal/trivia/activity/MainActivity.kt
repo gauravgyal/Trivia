@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity(), QuestionView.QuestionViewListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initUI()
+        
         observeQuestion()
         activityVM.getData()
     }
