@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.view_question.*
 
 class MainActivity : AppCompatActivity(), QuestionView.QuestionViewListener {
 
-    private val mHandler by lazy { Handler() }
+        private val mHandler by lazy { Handler() }
     private val activityVM by lazy {
         ViewModelProviders.of(this).get(TriviaViewModel::class.java)
     }
@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity(), QuestionView.QuestionViewListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initUI()
-        
         observeQuestion()
         activityVM.getData()
     }
